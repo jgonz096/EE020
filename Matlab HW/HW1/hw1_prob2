@@ -1,0 +1,21 @@
+PROBLEM 2
+
+>> B = [2 0 3 3;
+        4 -3 7 5;
+        8 -9 15 10;]
+
+B =
+
+     2      0     3     3
+     4     -3     7     5
+     8     -9    15    10
+
+>> rref(B)
+
+ans =
+
+    1.0000         0    1.5000         0
+         0    1.0000   -0.3333         0
+         0         0         0    1.0000
+
+No solution due to an entire row of zeroes in row 3

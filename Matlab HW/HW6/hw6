@@ -1,0 +1,46 @@
+function [ w ] = projectUV( u,v )
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+    
+w = (dot(u,v)/norm(v))*v;
+
+end
+
+>> %Jorge Gonzalez
+>> %ee020 hw 6, Matlab Session
+>> %
+>> %Problem 9, function shown above
+>> u = [1 2 3;]
+
+u =
+
+     1     2     3
+
+>> v = [1 1 0;]
+
+v =
+
+     1     1     0
+
+>> projectUV(u,v)
+
+ans =
+
+    2.1213    2.1213         0
+
+>> %Problem 10
+>> A = [0 2 1;1 0 1;2 0 1;]
+
+A =
+
+     0     2     1
+     1     0     1
+     2     0     1
+
+>> [gschmidt(A);]
+
+ans =
+
+         0    1.0000         0
+    0.4472         0    0.8944
+    0.8944         0   -0.4472

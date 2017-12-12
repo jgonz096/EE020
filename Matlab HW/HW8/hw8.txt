@@ -1,0 +1,190 @@
+>> %Jorge Gonzalez
+>> %ee020 hw 8, Matlab Session
+>> %
+>> %Problem 6.
+>> A = [7 -4 0;8 -5 0;-4 4 3;]
+
+A =
+
+     7    -4     0
+     8    -5     0
+    -4     4     3
+
+>> c = poly(A)
+
+c =
+
+     1    -5     3     9
+
+>> lambda = roots(c)
+
+lambda =
+
+   3.0000 + 0.0000i
+   3.0000 - 0.0000i
+  -1.0000 + 0.0000i
+
+>> [n,m] = size(lambda)
+
+n =
+
+     3
+
+
+m =
+
+     1
+
+>> lambda = unique(lambda)
+
+lambda =
+
+  -1.0000 + 0.0000i
+   3.0000 - 0.0000i
+   3.0000 + 0.0000i
+
+>> lambda = unique(round(roots(c)*10000)/10000)
+
+lambda =
+
+    -1
+     3
+
+>> [nlambda,ndum] = size(lambda)
+
+nlambda =
+
+     2
+
+
+ndum =
+
+     1
+
+>> M1 = A - lambda(1)*eye(size(A))
+
+M1 =
+
+     8    -4     0
+     8    -4     0
+    -4     4     4
+
+>> homsoln(M1,1)
+The columns of the following matrix are a basis
+for the solution space of homogeneous system   
+Ax = 0.                                        
+ 
+    -1
+    -2
+     1
+
+ 
+The general solution is:
+ 
+r * col(1) 
+
+ans =
+
+    -1
+    -2
+     1
+
+>> disp(sprintf('\nEigenvectors for eigenvalue:\n lamda = %d\n',lambda(2)));
+
+Eigenvectors for eigenvalue:
+ lamda = 3
+
+>> homsoln(A - lambda(2)*eye(size(A)),1)
+The columns of the following matrix are a basis
+for the solution space of homogeneous system   
+Ax = 0.                                        
+ 
+     1     0
+     1     0
+     0     1
+
+ 
+The general solution is:
+ 
+r * col(1) + s * col(2) 
+
+ans =
+
+     1     0
+     1     0
+     0     1
+
+>> eigcomp(A)
+
+c =
+
+     1    -5     3     9
+
+
+lambda =
+
+    -1
+     3
+
+
+nlambda =
+
+     2
+
+
+ndum =
+
+     1
+
+
+M1 =
+
+     8    -4     0
+     8    -4     0
+    -4     4     4
+
+The columns of the following matrix are a basis
+for the solution space of homogeneous system   
+Ax = 0.                                        
+ 
+    -1
+    -2
+     1
+
+ 
+The general solution is:
+ 
+r * col(1) 
+
+ans =
+
+    -1
+    -2
+     1
+
+
+Eigenvectors for eigenvalue:
+ lamda = 3
+
+
+ans =
+
+    -1
+    -2
+     1
+>> %Problem 11
+>> A = [7 -4 0;8 -5 0;-4 4 3;]
+
+A =
+
+     7    -4     0
+     8    -5     0
+    -4     4     3
+
+>> eig(A)
+
+ans =
+
+     3
+    -1
+     3

@@ -1,0 +1,21 @@
+PROBLEM 3
+
+>> C = [1 2 3 0;
+        0 0 0 1;
+        0 0 0 0;]
+
+C =
+
+     1     2     3     0
+     0     0     0     1
+     0     0     0     0
+
+>> rref(C)
+
+ans =
+
+     1     2     3     0
+     0     0     0     1
+     0     0     0     0
+
+No solution due to an entire row of zeroes in row 2. 
